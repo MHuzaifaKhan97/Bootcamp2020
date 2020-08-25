@@ -1,0 +1,36 @@
+body{
+  margin: 0;
+  padding:0;
+  text-align: center;
+}
+.product-container{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.product{
+  width: 300px;
+  box-shadow: 0 0 10px #463636;
+  text-align: center;
+  margin:10px;
+  padding:10px;
+}
+.product:hover{
+  box-shadow: 5px 5px 15px #463636;
+  background-color: lightgray;
+}
+.product h3{
+  color: rgb(248, 93, 93);
+}
+.productItem{
+  max-width: 500px;
+}
+.productItem h3{
+  color: rgb(197, 41, 41);
+}
+.productItem img{
+  width: 500px;
+  height: 500px;
+  border: 1px solid red;
+  margin: 10px;
+}
