@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>WEB Animation</title>
+    <style>
+        h1{
+            color: yellow;            
+            text-align: center;
+            margin-top:300px;
+            font-size: 80px;
+            text-shadow: 1px 1px red;
+        }
+        body{
+            background-image: url('./download.jpeg');
+            background-size: 100% 100%;
+        }
+    </style>
+</head>
+<body>
+    
+    <h1 id="text">Huzaifa Khan</h1>
+    <script>
+
+        let el = document.getElementById("text");
+        el.animate([
+            {transform:'scale(0.5) rotate(0)'},
+            {transform:'scale(1.5) rotate(-25deg)'},
+            {transform:'scale(1.5) rotate(25deg)'},
+            {transform:'scale(0.5) rotate(0)'},
+        ],{
+            duration:2000,
+            iterations:Infinity
+        })
+
+    </script>
+</body>
+</html>

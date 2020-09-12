@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Web Animation</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        #box {
+            width: 100px;
+            height: 100px;
+            background-color: darkcyan;
+            margin: 0 auto;
+            margin-top: 200px;
+        }
+        #box h4{
+            color:red;
+            text-align: center;
+            padding-top: 40px;
+            text-transform: uppercase;
+        }
+    </style>
+</head>
+<body>
+    <div id="box">
+        <h4>Warning</h4>
+    </div>
+
+    <script>
+        let element = document.getElementById("box");
+        // first arg: keyframes, second arg: timing.
+        // element.animate([],{})
+        element.animate([
+            {transform: 'scale(0.5)'},
+            {transform: 'scale(1)'},
+            {transform: 'scale(1.5)',borderRadius:'10px'},
+            {transform: 'scale(2)'},
+            {transform: 'scale(2.5)',borderRadius:'50px'},
+            {transform: 'scale(3)'},
+            {transform: 'scale(3.5)',borderRadius:'75px'},
+            {transform: 'scale(4)'},
+            {transform: 'scale(4.5)',borderRadius:'100px'},
+            {transform: 'scale(4)'},
+            {transform: 'scale(3.5)',borderRadius:'75px'},
+            {transform: 'scale(3)'},
+            {transform: 'scale(2.5)',borderRadius:'50px'},
+            {transform: 'scale(2)'},
+            {transform: 'scale(1.5)',borderRadius:'10px'},
+            {transform: 'scale(1)'},
+        ], {
+            duration: 2000,
+            iterations: Infinity
+        })
+    </script>
+</body>
+
+</html>

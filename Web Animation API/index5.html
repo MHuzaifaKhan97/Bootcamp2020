@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Web Animation</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        #box {
+            width: 100px;
+            height: 100px;
+            background-color: darkcyan;
+        }
+    </style>
+</head>
+<body>
+    <div id="box"></div>
+
+    <script>
+        let element = document.getElementById("box");
+        // first arg: keyframes, second arg: timing.
+        // element.animate([],{})
+        element.animate([
+        { transform: 'translate(0px,0px)', background:'darkcyan' },
+        { transform: 'translate(1200px,0)', background:'red'},
+        { transform: 'translate(1200px,600px)',background:'darkcyan' },
+        { transform: 'translate(0,600px)',background:'red' },
+        { transform: 'translate(0px,0px)',background:'darkcyan' },
+        { transform: 'translate(0,600px)',background:'red' },
+        { transform: 'translate(1200px,600px)',background:'darkcyan' },
+        { transform: 'translate(1200px,0)',background:'red' },
+        { transform: 'translate(0px,0px)',background:'darkcyan' },
+        ], {
+            duration: 5000,
+            iterations: Infinity
+        })
+    </script>
+</body>
+
+</html>

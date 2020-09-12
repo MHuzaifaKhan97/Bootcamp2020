@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Web Animation</title>
+    <style>
+        body{   
+            background:url('./bckground.jpg');
+            background-repeat: no-repeat;
+            width: 1200px;
+            background-color: gray;
+            background-position: center;
+            height: 100vh;
+        }
+        img{
+            margin-top: 100px;
+        }
+    </style>
+</head>
+<body>
+        <img src="./cloud.gif" width="600" height="200" id="cloud" />
+
+    <script>
+        let element = document.getElementById("cloud");
+        let animateElem = element.animate([
+            {transform:'translate(0,0)'},
+            {transform:'translate(700px,70px)'},
+            {transform:'translate(0,0)'}
+        ],{
+            duration:7000,
+            iterations:Infinity
+        })
+
+        document.addEventListener('mousedown',() => {
+            animateElem.pause()
+        })
+        document.addEventListener('mouseup',() => {
+            animateElem.play()
+        })
+    </script>
+</body>
+
+</html>
